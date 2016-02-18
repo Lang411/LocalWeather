@@ -1,10 +1,12 @@
 //Code to get users location. From FreeCodeCamp.org example 
 if (navigator.geolocation) {
 navigator.geolocation.getCurrentPosition(function(position) {
-$("#locationData").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
+$("#locationData").html("Latitude: " + position.coords.latitude + "&deg;   +     Longitude: " + position.coords.longitude+"&deg;");
 });
 }
-
+myLat = position.coords.latitude;
+myLon = position.coords.longitude;
+/*
 //Get JSON from API		
 $("#getMessage").on("ready", function(){
       $.getJSON("/json/cats.json", function(json) {
@@ -20,3 +22,4 @@ html += "<b>" + key + "</b>: " + val[key] + "<br>";
 });
 html += "</div><br>";
 });
+*/

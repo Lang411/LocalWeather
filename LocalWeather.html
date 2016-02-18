@@ -24,17 +24,16 @@
 	</head>
 	
 	<body>
-	<script src="js/index.js"></script>
-	<script>
-	if (navigator.geolocation) {
-navigator.geolocation.getCurrentPosition(function(position) {
-$("#locationData").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
-});
-}
-</script>
+	<script src="index.js"></script>
 
-<div id = "locationData">
-  <h1>You are here:</h1>
+
+
+<div>
+  <h1>Your Local Weather:</h1>
+  <h4 id = "locationData"></h4>
+  <h2>Sunny</h2>
+  <h2>55deg</h2>
+  <h2>Chance of Rain:0%</h2>
   
 </div>
 

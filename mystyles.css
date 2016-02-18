@@ -1,10 +1,20 @@
-body {
-	background-image: url('file:///C:/Users/lkenney/Desktop/CODE/Local%20Weather/03994_bixbybridgehazydusk_1600x900.jpg');
-	background-repeat: no-repeat;
-    background-size: 100%;
+body {     
+	background-image: url('https://github.com/Lang411/LocalWeather/blob/master/Assets/03994_bixbybridgehazydusk_1600x900.jpg?raw=true');     
+	background-repeat: no-repeat;     
+	background-size: 100%; 
+	
 }
 
 h1 {
 	font-size:100px;
+	color:white;
+}
+
+h4 {
+	//font-size:75px;
+	color:white;
+
+}
+h2	{
 	color:white;
 }
