@@ -15,13 +15,16 @@ if (navigator.geolocation) {
 		$.getJSON( WeatherAPI, function(json) {
 			console.log(json)
 			$("#WeatherData").html(JSON.stringify(json));
-			$("#yourCity").html('Your City: '+json.name);
+			$("#yourCity").html('The weather in '+json.name+' is:');
 			$("#yourWeather").html('Your Weather: '+json.weather[0].description);
 			if (json.weather[0].main=='Rain'){
 				console.log('Rain')
-				var imageUrl = 'https://github.com/Lang411/LocalWeather/blob/master/Assets/04001_thepierofhanaleibay_1600x900.jpg?raw=true';
-				 $("body").css('background-image', 'url("https://github.com/Lang411/LocalWeather/blob/master/Assets/04001_thepierofhanaleibay_1600x900.jpg?raw=true")');
-			};
+				 $("body").css('background-image', 'url("https://github.com/Lang411/LocalWeather/blob/master/Assets/san-francisco-city-landscape.jpg?raw=true")');
+			}
+			else if (json.weather[0].main=='Sunny'){
+				console.log('Sun')
+				 $("body").css('background-image', 'url("https://github.com/Lang411/LocalWeather/blob/master/Assets/04010_mcwayfalls_1600x900.jpg?raw=true")');
+			}
 			json.weather[0].description
 			$("#yourTemp").html('Your Temprature: '+(9/5*(json.main.temp - 273) + 32).toFixed(2)+'&deg;F');
 			$("#yourHumidity").html('Your Humidity: '+json.main.humidity+'%');
